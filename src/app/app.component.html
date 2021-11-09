@@ -1,0 +1,34 @@
+<div class="container">
+  <h1 class="title is-1">To-do-list</h1>
+
+  <!--Division for taking input from user -->
+  <div class="field has-addons">
+      <div  class="control">
+          <input
+            class="input is-primary"
+            [(ngModel)]="newTask"
+            value=""
+            type="text"
+            placeholder="Enter your Goal here!!"
+          />
+      </div>
+      <div class="control">
+          <button  (click)="addToList()" class="button is-primary is-light">Add Task</button>
+      </div>
+  </div>
+  <!--Tasks added repeated divisions-->
+  <div
+    *ngFor="let x of items; let index = index"
+    class="columns"
+    style="height: 100px"
+  >
+   <div class="notification is-success is-light column is-11 is-variable is-3 p-4 m-2">{{ x }}</div>
+       
+       <input
+      class="button is-danger is-light column m-2 	"
+         (click)="deleteTask(index)"
+         type="button"
+         value="Delete"
+       />
+  </div>
+</div>
