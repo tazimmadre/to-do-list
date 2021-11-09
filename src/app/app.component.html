@@ -2,18 +2,19 @@
   <h1 class="title is-1">To-do-list</h1>
 
   <!--Division for taking input from user -->
+
   <div class="field has-addons">
+
       <div  class="control">
-          <input
-            class="input is-primary"
-            [(ngModel)]="newTask"
-            value=""
-            type="text"
-            placeholder="Enter your Goal here!!"
-          />
+              <input
+                class="input is-primary"
+               [(ngModel)]="newTask"
+                type="text"
+                placeholder="Enter your Goal here!!"
+              />
       </div>
       <div class="control">
-          <button  (click)="addToList()" class="button is-primary is-light">Add Task</button>
+          <button  (click)="addToList($event)" class="button is-primary is-light">Add Task</button>
       </div>
   </div>
   <!--Tasks added repeated divisions-->
